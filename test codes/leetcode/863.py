@@ -1,6 +1,5 @@
 class Solution:
     def distanceK(self, root: TreeNode, target: TreeNode, k: int) -> List[int]:
-        # Recursively add a parent pointer to each node.
         def add_parent(cur, parent):
             if cur:
                 cur.parent = parent
