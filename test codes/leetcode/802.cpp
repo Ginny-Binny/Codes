@@ -6,7 +6,6 @@ public:
         int n = graph.size();
         vector<int> indegree(n);
         vector<vector<int>> adj(n);
-
         for (int i = 0; i < n; i++) {
             for (auto node : graph[i]) {
                 adj[node].push_back(i);
