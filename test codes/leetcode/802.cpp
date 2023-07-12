@@ -19,7 +19,6 @@ public:
                 q.push(i);
             }
         }
-
         vector<bool> safe(n);
         while (!q.empty()) {
             int node = q.front();
