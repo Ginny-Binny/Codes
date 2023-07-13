@@ -27,7 +27,6 @@ public:
                 }
             }
         }
-
         return nodesVisited == numCourses;
     }
 };
