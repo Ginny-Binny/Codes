@@ -22,7 +22,6 @@ public:
             nodesVisited++;
 
             for (auto& neighbor : adj[node]) {
-                // Delete the edge "node -> neighbor".
                 indegree[neighbor]--;
                 if (indegree[neighbor] == 0) {
                     q.push(neighbor);
