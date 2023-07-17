@@ -44,18 +44,6 @@ elif mood == 2:
                    """)
 elif mood == 3:
     # sad
-
- 
-
- 
-
- 
-
- 
-
- 
-
-
     print( \
     """
        -----------
@@ -69,8 +57,6 @@ elif mood == 3:
                    """)
 else:
     print("Illegal mood value!  (You must be in a really bad mood).")
-
- 
 
 print("...today.")
 
