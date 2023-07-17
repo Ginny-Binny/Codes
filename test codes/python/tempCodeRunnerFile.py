@@ -1,11 +1,14 @@
-print("\t\t\tFancy Credits")
-print("\t\t\t\t \\ \\ \\ \\")
-print("\t\t\t\t by")
-print("\t\t\t\t David")
-print("\t\t\t\t \\ \\ \\ \\")
+print("You can concatenate two" +"Strings with the '+' operator.")
 
-print("\nSpecial thanks goes out to:")
-print("Jhonson")
+print("\nThis strings"+" may not"+" seems terr"+"iblly impressive."
+      + "But what"+" you don't know"+" is that\n"+"it's one real"
+      +"1"+"y"+" long string,created from concatetion "
+      +"of "+"twenty-two\n"+"different strings,broken across "
+      +"six lines."+" Now are you"+" impressed? "+"Okay,\n"
+      +"this "+"one "+"long"+" strings is now over!")
+print("\nIf you really like a string,you can repeat it. For example,")
+print("Who doesn't like pie? That's right, nobody. But if you really")
+print("like it, you should say it like you mean it:")
+print("Pie")
 print("20BCS4806_Aditi Mehra")
-print("\t")
-print("\n\nPress the enter key to exit")
+input("\n\nPress the enter key to exit.")
