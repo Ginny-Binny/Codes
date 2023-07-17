@@ -1,16 +1,12 @@
-print("Welcome to System Security Inc.")
-print("-- Locker\n")
+print("\tWelcome to the 'Three-Year-Old Simulator'\n")
+print("This program simulates a conversation with a three-year-old child.")
+print("Try to stop the madness.\n")
+response = ""
+while response != "Because.":
+    response = input("Why?\n")
 
- 
-
-password = input("Enter your password: ")
-
- 
-
-if password == "more":
-    print("Access Granted")
-else:
-    print("Access Denied")
+print("Oh.  Okay.")
 
 print("aditi mehra -- 20BCS4806")
+
 input("\n\nPress the enter key to exit.")
