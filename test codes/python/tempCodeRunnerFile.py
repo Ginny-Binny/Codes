@@ -1,10 +1,18 @@
-import random
 
-dice1 = random.randint(2, 9) 
-dice2 = random.randrange(1, 6)  
+print("Welcome to System Security Inc.")
+print("-- Locker\n")
 
-total = dice1 + dice2
+ 
 
-print("You rolled a", dice1, "and a", dice2, "for a total of", total)
+password = input("Enter your password: ")
+
+ 
+
+if password == "BOOM":
+    print("Access Granted")
+
+ 
 print("aditi mehra -- 20BCS4806")
 input("\n\nPress the enter key to exit.")
+
+
