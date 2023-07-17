@@ -1,12 +1,11 @@
-print("\tWelcome to the 'Three-Year-Old Simulator'\n")
-print("This program simulates a conversation with a three-year-old child.")
-print("Try to stop the madness.\n")
-response = ""
-while response != "Because.":
-    response = input("Why?\n")
+word = input("Enter a word: ")
 
-print("Oh.  Okay.")
+ 
 
+print("\nHere's each letter in your word:")
+for let in word:
+    print(let)
+
+ 
 print("aditi mehra -- 20BCS4806")
-
 input("\n\nPress the enter key to exit.")
