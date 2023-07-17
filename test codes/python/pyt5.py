@@ -1,0 +1,11 @@
+print("\t\t\tFancy Credits")
+print("\t\t\t\t \\ \\ \\ \\")
+print("\t\t\t\t by")
+print("\t\t\t\t David")
+print("\t\t\t\t \\ \\ \\ \\")
+
+print("\nSpecial thanks goes out to:")
+print("Jhonson")
+print("20BCS2347_Paramjyati Mushahary")
+print("\t")
+print("\n\nPress the enter key to exit")
