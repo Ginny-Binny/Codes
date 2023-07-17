@@ -6,6 +6,6 @@ print("\t\t\t\t \\ \\ \\ \\")
 
 print("\nSpecial thanks goes out to:")
 print("Jhonson")
-print("20BCS2347_Paramjyati Mushahary")
+print("20BCS4806_Aditi Mehra")
 print("\t")
 print("\n\nPress the enter key to exit")

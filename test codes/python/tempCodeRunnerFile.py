@@ -1,11 +1,11 @@
-word = input("Enter a word: ")
+print("\t\t\tFancy Credits")
+print("\t\t\t\t \\ \\ \\ \\")
+print("\t\t\t\t by")
+print("\t\t\t\t David")
+print("\t\t\t\t \\ \\ \\ \\")
 
- 
-
-print("\nHere's each letter in your word:")
-for let in word:
-    print(let)
-
- 
-print("aditi mehra -- 20BCS4806")
-input("\n\nPress the enter key to exit.")
+print("\nSpecial thanks goes out to:")
+print("Jhonson")
+print("20BCS4806_Aditi Mehra")
+print("\t")
+print("\n\nPress the enter key to exit")
