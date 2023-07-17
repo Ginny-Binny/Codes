@@ -1,9 +1,6 @@
-# Game Over - Version 1
+d = input ("\n\nEnter Your Favorite Bike \n\n")
+print("\n\nYou like",d,"Color of bike")
 
-
-print("Program 'Game Over' 1.0")
-
-print("'Game Over'")
 print("aditi mehra -- 20BCS4806")
 
-input("\n\nPress the enter key to exit.")
+input("\n\nPress the enter key to exit")
