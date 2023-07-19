@@ -14,7 +14,7 @@ public:
             int y = intervals[i][1];
             
             if (x >= k) {
-                // Case 1
+            
                 k = y;
             } else {
                 // Case 2
