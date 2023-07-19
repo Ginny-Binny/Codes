@@ -26,6 +26,6 @@ print(quote.strip())
 print("\nOriginal quote is still:")
 print(quote)
 
-print("\n\nParamjyati Mushahary_20BCS2347")
+print("20BCS4806_Aditi Mehra")
 
 input("\n\nPress the enter key to exit.")

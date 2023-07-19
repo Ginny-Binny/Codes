@@ -1,14 +1,24 @@
-print("You can concatenate two" +"Strings with the '+' operator.")
+#Trust Fund Buddy Bad
+#Demonstrates a logical error
+print (
+"""
+                Trust Fund Buddy
+                
+Totals your monthly spending so that your trust fund doesn't run out
+(and you're forced to get a real job).
+Please enter the requested, monthly costs. Since you're rich, ignore pennies
+and use only dollar amounts.
 
-print("\nThis strings"+" may not"+" seems terr"+"iblly impressive."
-      + "But what"+" you don't know"+" is that\n"+"it's one real"
-      +"1"+"y"+" long string,created from concatetion "
-      +"of "+"twenty-two\n"+"different strings,broken across "
-      +"six lines."+" Now are you"+" impressed? "+"Okay,\n"
-      +"this "+"one "+"long"+" strings is now over!")
-print("\nIf you really like a string,you can repeat it. For example,")
-print("Who doesn't like pie? That's right, nobody. But if you really")
-print("like it, you should say it like you mean it:")
-print("Pie")
-print("20BCS4806_Aditi Mehra")
-input("\n\nPress the enter key to exit.")
+"""
+)
+car = input ("Lamborghini Tune-Ups: ")
+rent = input ("Manhattan Apartment: ")
+jet = input ("Private Jet Rental: ")
+gifts = input ("Gifts: ")
+food = input ("Dining Out: ")
+staff = input ("Staff (butlers, chef, driver, assistant):")
+guru = input ("Personal Guru and Coach: ")
+games = input ("Computer Games: ")
+total = car + rent + jet + gifts + food + staff + guru + games
+print ("\nGrand Total:", total)
+input ("\n\nPress the enter key to exit.")
