@@ -17,7 +17,6 @@ public:
             
                 k = y;
             } else {
-                // Case 2
                 ans++;
             }
         }
