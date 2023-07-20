@@ -14,7 +14,6 @@ public:
                     st.pop();
                 }
 
-                // Hence, we should not add it to the stack
                 flag = 0;
                 break;
             }
