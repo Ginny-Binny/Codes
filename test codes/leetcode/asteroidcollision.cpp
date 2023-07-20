@@ -10,7 +10,6 @@ public:
                     st.pop();
                     continue;
                 }
-                // If both asteroids are the same size, then both asteroids will explode.
                 // Pop the asteroid from the stack; also, we won't push the current asteroid to the stack.
                 else if (abs(st.top()) == abs(asteroid)) {
                     st.pop();
