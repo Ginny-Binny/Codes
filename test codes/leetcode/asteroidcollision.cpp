@@ -23,7 +23,6 @@ public:
             }
         }
         
-        // Add the asteroids from the stack to the vector in the reverse order.
         vector<int> remainingAsteroids (st.size());
         for (int i = remainingAsteroids.size() - 1; i >= 0; i--){
             remainingAsteroids[i] = st.top();
