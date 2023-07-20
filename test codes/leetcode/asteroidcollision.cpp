@@ -14,7 +14,6 @@ public:
                     st.pop();
                 }
 
-                // If we reach here, the current asteroid will be destroyed
                 // Hence, we should not add it to the stack
                 flag = 0;
                 break;
