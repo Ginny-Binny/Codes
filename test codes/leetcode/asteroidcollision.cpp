@@ -6,7 +6,6 @@ public:
         for (int asteroid : asteroids) {
             int flag = 1;
             while (!st.empty() && (st.top() > 0 && asteroid < 0)) {
-                // If the top asteroid in the stack is smaller, then it will explode.
                 // Hence pop it from the stack, also continue with the next asteroid in the stack.
                 if (abs(st.top()) < abs(asteroid)) {
                     st.pop();
