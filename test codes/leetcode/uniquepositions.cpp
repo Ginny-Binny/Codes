@@ -1,30 +1,30 @@
-#include <iostream>
 #include <unordered_set>
 using namespace std;
 
-int countUniquePositions(int k, const string& moves) {
-    int position = 0;
-    unordered_set<int> uniquePositions;
-    uniquePositions.insert(position);
+class Solution {
+public:
+    int uniquePositions(string moves, long long k) {
+        vector<int> positions = {0};
+        unordered_set<int> uniquePositions;
+        uniquePositions.insert(0);
 
-    for (char move : moves) {
-        if (move == 'F') {
-            position += k;
-        } else if (move == 'B') {
-            position -= k;
+        for (char move : moves) {
+            vector<int> newPositions;
+            for (int pos : positions) {
+                int newPosForward = pos + k;
+                int newPosBackward = pos - k;
+                if (uniquePositions.find(newPosForward) == uniquePositions.end()) {
+                    newPositions.push_back(newPosForward);
+                    uniquePositions.insert(newPosForward);
+                }
+                if (uniquePositions.find(newPosBackward) == uniquePositions.end()) {
+                    newPositions.push_back(newPosBackward);
+                    uniquePositions.insert(newPosBackward);
+                }
+            }
+            positions = newPositions;
         }
-        uniquePositions.insert(position);
+
+        return uniquePositions.size();
     }
-
-    return uniquePositions.size();
-}
-
-int main() {
-    int k = 2;
-    string moves = "FBFB";
-
-    int uniquePositions = countUniquePositions(k, moves);
-    cout << "Number of unique positions: " << uniquePositions << endl;
-
-    return 0;
-}
+};
