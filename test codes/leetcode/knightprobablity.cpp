@@ -4,7 +4,6 @@ public:
         vector<pair<int, int>> directions = {{1, 2}, {1, -2}, {-1, 2}, {-1, -2},
                                             {2, 1}, {2, -1}, {-2, 1}, {-2, -1}};
 
-        // Initialize the dynamic programming table
         vector dp(k + 1, vector (n, vector<double>(n, 0.0)));
         dp[0][row][column] = 1;
 
