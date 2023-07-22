@@ -38,4 +38,4 @@ public:
         while (pow(num, x) <= n) {
             num++;
         }
-        return waysToSum(n, x, num - 1);};
+        return waysToSum(n, x, num - 1);};}
