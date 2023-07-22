@@ -14,7 +14,6 @@ public:
                         int prevI = i - direction.first;
                         int prevJ = j - direction.second;
                         if (prevI >= 0 && prevI < n && prevJ >= 0 && prevJ < n) {
-                            // Add the previous probability divided by 8
                             dp[moves][i][j] += dp[moves - 1][prevI][prevJ] / 8;
                         }
                     }
