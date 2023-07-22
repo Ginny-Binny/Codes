@@ -21,7 +21,6 @@ public:
             }
         }
 
-        // Calculate total probability by summing probabilities for all cells
         double totalProbability = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
