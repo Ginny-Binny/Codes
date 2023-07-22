@@ -13,7 +13,6 @@ public:
                     for (const auto& direction : directions) {
                         int prevI = i - direction.first;
                         int prevJ = j - direction.second;
-                        // Check if the previous cell is within the chessboard
                         if (prevI >= 0 && prevI < n && prevJ >= 0 && prevJ < n) {
                             // Add the previous probability divided by 8
                             dp[moves][i][j] += dp[moves - 1][prevI][prevJ] / 8;
