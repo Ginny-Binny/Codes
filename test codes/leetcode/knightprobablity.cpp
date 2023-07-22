@@ -8,7 +8,6 @@ public:
         dp[0][row][column] = 1;
 
         for (int moves = 1; moves <= k; moves++) {
-            // Iterate over the cells on the chessboard
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     // Iterate over possible directions
