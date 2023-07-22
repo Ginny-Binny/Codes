@@ -1,7 +1,6 @@
 class Solution {
 public:
     double knightProbability(int n, int k, int row, int column) {
-        // Define possible directions for the knight's moves
         vector<pair<int, int>> directions = {{1, 2}, {1, -2}, {-1, 2}, {-1, -2},
                                             {2, 1}, {2, -1}, {-2, 1}, {-2, -1}};
 
