@@ -10,7 +10,6 @@ public:
         for (int moves = 1; moves <= k; moves++) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    // Iterate over possible directions
                     for (const auto& direction : directions) {
                         int prevI = i - direction.first;
                         int prevJ = j - direction.second;
