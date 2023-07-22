@@ -7,7 +7,6 @@ public:
         vector dp(k + 1, vector (n, vector<double>(n, 0.0)));
         dp[0][row][column] = 1;
 
-        // Iterate over the number of moves
         for (int moves = 1; moves <= k; moves++) {
             // Iterate over the cells on the chessboard
             for (int i = 0; i < n; i++) {
