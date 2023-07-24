@@ -12,7 +12,6 @@ public:
         if (n % 2 == 1) {
             return x * binaryExp(x * x, (n - 1) / 2);
         }
-        // Otherwise we calculate result by performing Binary Exponentiation on 'n'.
         else {
             return binaryExp(x * x, n / 2);
         }
