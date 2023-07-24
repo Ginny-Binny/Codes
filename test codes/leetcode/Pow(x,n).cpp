@@ -5,7 +5,6 @@ public:
             return 1;
         }
        
-        // Handle case where, n < 0.
         if (n < 0) {
             return 1.0 / binaryExp(x, -1 * n);
         }
