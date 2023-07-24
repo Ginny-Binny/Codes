@@ -1,7 +1,6 @@
 class Solution {
 public:
     double binaryExp(double x, long long n) {
-        // Base case, to stop recursive calls.
         if (n == 0) {
             return 1;
         }
