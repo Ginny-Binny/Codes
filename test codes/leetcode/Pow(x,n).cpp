@@ -9,7 +9,6 @@ public:
             return 1.0 / binaryExp(x, -1 * n);
         }
        
-        // Perform Binary Exponentiation.
         // If 'n' is odd we perform Binary Exponentiation on 'n - 1' and multiply result with 'x'.
         if (n % 2 == 1) {
             return x * binaryExp(x * x, (n - 1) / 2);
