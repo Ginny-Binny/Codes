@@ -21,7 +21,7 @@ int main() {
             for (int j = 0; j < m; j++) {
                 int stepHeight = (j + 1) * k;
                 int heightDiff = abs(heights[i] - stepHeight);
-                if (heightDiff == 0 || heightDiff % k == 0) {
+                if (heightDiff > 0 && heightDiff <= H && heightDiff % k == 0) {
                     conversations++;
                     break; // Move to the next person
                 }
