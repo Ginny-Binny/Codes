@@ -2,43 +2,64 @@
 #include <vector>
 using namespace std;
 
-bool can_construct_path(vector<int>& path_colors, int k) {
-    int n = path_colors.size();
-    vector<int> prefix_sum(n + 1, 0);
+#define ll long long 
+#define pb push_back
+#define loop(n) for(long long i=0;i<n;i++)
+#define rloop(n) for(long long i=n-1;i>=0;i--)
 
-    // Calculate prefix sum
-    for (int i = 1; i <= n; ++i) {
-        prefix_sum[i] = prefix_sum[i - 1] + path_colors[i - 1];
-    }
+int main(){
 
-    // Check if path can be constructed
-    for (int i = k; i <= n; ++i) {
-        if ((prefix_sum[i] - prefix_sum[i - k]) % k != 0 || prefix_sum[i] % k != 0) {
-            return false;
-        }
-    }
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-    return true;
-}
+#ifndef ONLINE_JUDGE
+    freopen("input.txt","r",stdin);
+    freopen("output1.txt","w",stdout);
+#endif
 
-int main() {
-    int t;
-    cin >> t;
+    int test_cases;
+    cin >> test_cases;
+    while (test_cases--) {
 
-    while (t--) {
-        int n, k;
+        ll n, k;
         cin >> n >> k;
 
-        vector<int> path_colors(n);
-        for (int i = 0; i < n; ++i) {
-            cin >> path_colors[i];
+        vector<ll> a(n);
+        loop(n){
+            cin >> a[i];
         }
 
-        if (can_construct_path(path_colors, k)) {
-            cout << "YES" << endl;
-        } else {
-            cout << "NO" << endl;
+        ll last = n - 1;
+        ll cnt = 0;
+        loop(n){
+            if (a[i] == a[0])
+                cnt++;
+            if (cnt == k){
+                last = i;
+                break;
+            }
         }
+
+        if (cnt < k){
+            cout << "NO" << endl;
+            continue;
+        } else {
+            if (a[0] == a[n - 1]){
+                cout << "YES" << endl;
+                continue;
+            }
+        }
+
+        cnt = 0;
+        for (int i = n - 1; i > last; i--){
+            if (a[i] == a[n - 1])
+                cnt++;
+        }
+
+        if (cnt >= k)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
 
     return 0;
