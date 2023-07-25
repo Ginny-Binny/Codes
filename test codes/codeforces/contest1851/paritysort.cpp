@@ -1,38 +1,36 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
+bool canSortArray(const std::vector<int>& arr) {
+    int oddCount = 0;
+    int evenCount = 0;
 
-bool canSortArray(vector<int>& a) {
-    int n = a.size();
-    int evenCount = 0, oddCount = 0;
-
-    for (int i = 0; i < n; ++i) {
-        if (a[i] % 2 == 0)
-            evenCount++;
-        else
+    for (int num : arr) {
+        if (num % 2 == 1) {
             oddCount++;
+        } else {
+            evenCount++;
+        }
     }
 
-    return (evenCount == n || oddCount == n || evenCount % 2 == 0);
+    return (oddCount > 0 && evenCount > 0);
 }
 
 int main() {
-    int t;
-    cin >> t;
+    int t; // Number of test cases
+    std::cin >> t;
 
     while (t--) {
-        int n;
-        cin >> n;
-        vector<int> a(n);
-
-        for (int i = 0; i < n; ++i)
-            cin >> a[i];
-
-        if (canSortArray(a))
-            cout << "YES" << endl;
-        else
-            cout << "NO" << endl;
+        int n; // Size of the array
+        std::cin >> n;
+        
+        std::vector<int> arr(n);
+        for (int i = 0; i < n; ++i) {
+            std::cin >> arr[i];
+        }
+        
+        bool result = canSortArray(arr);
+        std::cout << (result ? "YES" : "NO") << std::endl;
     }
 
     return 0;
