@@ -1,22 +1,20 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
-bool canSort(vector<int>& arr) {
-    int n = arr.size();
-    int even = 0, odd = 0;
-    
+bool canSortArray(vector<int>& a) {
+    int n = a.size();
+    int evenCount = 0, oddCount = 0;
+
     for (int i = 0; i < n; ++i) {
-        if (arr[i] % 2 == 0) {
-            if (i % 2 != 0)
-                even++;
-        } else {
-            if (i % 2 == 0)
-                odd++;
-        }
+        if (a[i] % 2 == 0)
+            evenCount++;
+        else
+            oddCount++;
     }
-    
-    return even == odd;
+
+    return (evenCount == n || oddCount == n || evenCount % 2 == 0);
 }
 
 int main() {
@@ -26,12 +24,12 @@ int main() {
     while (t--) {
         int n;
         cin >> n;
-        vector<int> arr(n);
+        vector<int> a(n);
 
         for (int i = 0; i < n; ++i)
-            cin >> arr[i];
+            cin >> a[i];
 
-        if (canSort(arr))
+        if (canSortArray(a))
             cout << "YES" << endl;
         else
             cout << "NO" << endl;
