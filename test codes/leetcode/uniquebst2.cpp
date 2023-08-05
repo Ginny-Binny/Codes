@@ -13,7 +13,6 @@ public:
             vector<TreeNode*> leftSubTrees = allPossibleBST(start, i - 1, memo);
             vector<TreeNode*> rightSubTrees = allPossibleBST(i + 1, end, memo);
 
-            // Loop through all left and right subtrees and connect them to the ith root.
             for (auto left: leftSubTrees) {
                 for (auto right: rightSubTrees) {
                     TreeNode* root = new TreeNode(i, left, right);
