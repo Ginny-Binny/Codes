@@ -21,7 +21,6 @@ public:
         
         int ans = numeric_limits<int>::max();
         
-        // Calculate the minimum seconds for each element's indices
         for (const auto& entry : indexMap) {
             int maxSeconds = (n - entry.second.back() - 1 + entry.second[0]) / 2 + (n - entry.second.back() - 1 + entry.second[0]) % 2;
 
