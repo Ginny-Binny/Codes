@@ -15,7 +15,6 @@ public:
             indexMap[nums[i]].push_back(i);
         }
         
-        // Sort the indices for each element
         for (auto& entry : indexMap) {
             sort(entry.second.begin(), entry.second.end());
         }
