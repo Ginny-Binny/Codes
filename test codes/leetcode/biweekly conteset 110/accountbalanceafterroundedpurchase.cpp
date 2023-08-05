@@ -5,7 +5,7 @@ public:
     }
     
     int accountBalanceAfterPurchase(int purchaseAmount) {
-        int accountBalance = 100; // Initial account balance
+        int accountBalance = 100; 
         int roundedAmount = nearestMultipleOf10(purchaseAmount);
         int newBalance = accountBalance - roundedAmount;
         return newBalance;
