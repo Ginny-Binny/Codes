@@ -11,7 +11,6 @@ public:
         unordered_map<int, vector<int>> indexMap;
         int n = nums.size();
         
-        // Store the indices of each element in a map
         for (int i = 0; i < n; i++) {
             indexMap[nums[i]].push_back(i);
         }
