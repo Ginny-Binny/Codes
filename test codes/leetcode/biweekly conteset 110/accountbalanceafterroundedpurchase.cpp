@@ -1,7 +1,7 @@
 class Solution {
 public:
     int nearestMultipleOf10(int num) {
-        return ((num + 5) / 10) * 10; // Round to the nearest multiple of 10
+        return ((num + 5) / 10) * 10; 
     }
     
     int accountBalanceAfterPurchase(int purchaseAmount) {
