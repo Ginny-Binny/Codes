@@ -1,23 +1,39 @@
 #include <iostream>
 #include <vector>
 
-std::string solveTestCase(std::vector<int>& arr) {
-    int evenCount = 0;
-    int oddCount = 0;
+using namespace std;
+ 
+int main(){
+    int t;
+    cin>>t;
+    vector<int>v;
+    while(t--){
+        vector<int> arr;
+        int a;
+        int n;
+        cin>>n;
+        for(int i=0;i<n;i++){
+            cin>>a;
+            v.push_back(a);
+        }
 
-    for (int num : arr) {
-        if (num % 2 == 0) {
-            evenCount++;
-        } else {
-            oddCount++;
+        int odd=0, even=0, cem=0;
+        for(int i=0;i<v.size();i++){
+            cem += v[i];
+            if(v[i]%2==0){
+                odd++;
+
+            }
+            else{
+                even++;
+            }
+        }
+        if(cem%2 != 0){
+            cout<<"NO"<<endl;
+        }
+        else{
+            cout<<"YES"<<endl;
         }
     }
-
-    if (evenCount > 0 && oddCount > 0) {
-        return "YES";
-    } else if (evenCount > 1 || oddCount > 1) {
-        return "YES";
-    } else {
-        return "NO";
-    }
+    return 0;
 }
