@@ -2,38 +2,38 @@
 #include <vector>
 
 using namespace std;
- 
-int main(){
+
+int main() {
     int t;
-    cin>>t;
-    vector<int>v;
-    while(t--){
-        vector<int> arr;
-        int a;
+    cin >> t;
+
+    while (t--) {
+        vector<int> v;
+        
         int n;
-        cin>>n;
-        for(int i=0;i<n;i++){
-            cin>>a;
+        cin >> n;
+
+        for (int i = 0; i < n; i++) {
+            int a;
+            cin >> a;
             v.push_back(a);
         }
 
-        int odd=0, even=0, cem=0;
-        for(int i=0;i<v.size();i++){
+        int odd = 0, even = 0, cem = 0;
+        for (int i = 0; i < v.size(); i++) {
             cem += v[i];
-            if(v[i]%2==0){
-                odd++;
-
-            }
-            else{
+            if (v[i] % 2 == 0) {
                 even++;
+            } else {
+                odd++;
             }
         }
-        if(cem%2 != 0){
-            cout<<"NO"<<endl;
-        }
-        else{
-            cout<<"YES"<<endl;
+        if (cem % 2 == 0 && (odd > 0 || (even > 0 && n > 1))) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
         }
     }
+    
     return 0;
 }
