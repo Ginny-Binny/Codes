@@ -1,6 +1,5 @@
 class Solution {
 public:
-    // Find the number of valid pairs by greedy approach
     int countValidPairs(vector<int>& nums, int threshold) {
         int index = 0, count = 0;
         while (index < nums.size() - 1) {
