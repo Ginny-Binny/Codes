@@ -23,7 +23,7 @@ public:
             bool targetArray = existsInFirst(nums, start, target);
             if (pivotArray ^ targetArray) { 
                 if (pivotArray) {
-                    start = mid + 1; // pivot in the first, target in the second
+                    start = mid + 1; 
                 } else {
                     end = mid - 1; // target in the first, pivot in the second
                 }
