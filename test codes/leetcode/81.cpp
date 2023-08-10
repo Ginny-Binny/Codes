@@ -20,7 +20,6 @@ public:
 
             bool pivotArray = existsInFirst(nums, start, nums[mid]);
 
-            // which array does target belong to.
             bool targetArray = existsInFirst(nums, start, target);
             if (pivotArray ^ targetArray) { // If pivot and target exist in different sorted arrays, recall that xor is true only when both the operands are distinct
                 if (pivotArray) {
