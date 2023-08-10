@@ -25,7 +25,7 @@ public:
                 if (pivotArray) {
                     start = mid + 1; 
                 } else {
-                    end = mid - 1; // target in the first, pivot in the second
+                    end = mid - 1; 
                 }
             } else { // If pivot and target exist in same sorted array
                 if (nums[mid] < target) {
