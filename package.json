@@ -2,6 +2,7 @@
   "dependencies": {
     "discord.js": "^13.6.0",
     "moment": "^2.29.4",
-    "mongoose": "^6.11.3"
+    "mongoose": "^6.11.3",
+    "semver": "^7.5.2"
   }
 }
