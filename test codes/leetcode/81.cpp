@@ -18,7 +18,6 @@ public:
                 continue;
             }
 
-            // which array does pivot belong to.
             bool pivotArray = existsInFirst(nums, start, nums[mid]);
 
             // which array does target belong to.
