@@ -21,7 +21,7 @@ public:
             bool pivotArray = existsInFirst(nums, start, nums[mid]);
 
             bool targetArray = existsInFirst(nums, start, target);
-            if (pivotArray ^ targetArray) { // If pivot and target exist in different sorted arrays, recall that xor is true only when both the operands are distinct
+            if (pivotArray ^ targetArray) { 
                 if (pivotArray) {
                     start = mid + 1; // pivot in the first, target in the second
                 } else {
