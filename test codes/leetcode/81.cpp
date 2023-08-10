@@ -27,7 +27,7 @@ public:
                 } else {
                     end = mid - 1; 
                 }
-            } else { // If pivot and target exist in same sorted array
+            } else { 
                 if (nums[mid] < target) {
                     start = mid + 1;
                 } else {
