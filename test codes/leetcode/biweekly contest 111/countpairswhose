@@ -1,0 +1,23 @@
+
+
+class Solution {
+public:
+    int countPairs(std::vector<int>& nums, int target) {
+        int n = nums.size();
+        std::sort(nums.begin(), nums.end()); // Sort the array
+
+        int count = 0;
+        int left = 0, right = n - 1;
+
+        while (left < right) {
+            if (nums[left] + nums[right] < target) {
+                count += right - left; // All pairs (left, right - left) satisfy the condition
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return count;
+    }
+};
