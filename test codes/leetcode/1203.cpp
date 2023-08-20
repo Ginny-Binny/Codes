@@ -41,7 +41,6 @@ public:
         
         vector<int> sort_group=topo_sort(adj_group_set, deg_group, m);
         vector<int> sort_item=topo_sort(adj_item, deg_item, n); 
-    //    print("adj_group",  adj_group);
     //    print("adj_item",  adj_item);
         if (sort_group.empty() || sort_item.empty()) return {};
 
