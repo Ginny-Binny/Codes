@@ -1,6 +1,5 @@
 class Solution {
 public:
-    //adj can be vector<vector<int>> or vector<unordered_set<int>>
     vector<int> topo_sort(auto& adj, vector<int>& deg, int sz){
         //Kahn's algorithm
         queue<int> q;
