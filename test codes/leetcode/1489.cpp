@@ -77,7 +77,6 @@ public:
             if (ufIgnore.maxSize < n || ignoreWeight > stdWeight) {
                 results[0].push_back(newEdges[i][3]);
             } else {
-                // Force this edge and calculate MST weight
                 UnionFind ufForce(n);
                 ufForce.unite(newEdges[i][0], newEdges[i][1]);
                 int forceWeight = newEdges[i][2];
