@@ -16,7 +16,6 @@ public:
         }
 
         int find(int x) {
-            // Finds the root of x
             if (x != parent[x]) {
                 parent[x] = find(parent[x]);
             }
