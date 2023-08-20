@@ -30,7 +30,6 @@ public:
             int to_i=group[i];
             for(int from: beforeItems[i]){
                 int from_j=group[from];
-                //avoid of multiple edges thx to @karandh83 @Nameresu
                 // pointing out the possiblity for multiple edges
                 if(to_i!=from_j && adj_group_set[from_j].count(to_i)==0){
                     adj_group_set[from_j].insert(to_i);
