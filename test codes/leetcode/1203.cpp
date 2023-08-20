@@ -25,7 +25,7 @@ public:
         }
         vector<vector<int>> adj_item(n);
         vector<int> deg_group(m, 0), deg_item(n, 0);
-        vector<unordered_set<int>> adj_group_set(m);//avoid of multiple edges
+        vector<unordered_set<int>> adj_group_set(m);
         for(int i=0; i<n; i++){
             int to_i=group[i];
             for(int from: beforeItems[i]){
