@@ -47,7 +47,6 @@ public:
             newEdges[i].push_back(i);
         }
 
-        // Sort edges based on weight
         sort(newEdges.begin(), newEdges.end(), [](auto& a, auto& b) {
             return a[2] < b[2];
         });
