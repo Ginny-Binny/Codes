@@ -42,7 +42,6 @@ public:
 
     vector<vector<int>> findCriticalAndPseudoCriticalEdges(int n, vector<vector<int>>& edges) {
         auto newEdges = edges;
-        // Add index to edges for tracking
         int m = newEdges.size();
         for (int i = 0; i < m; i++) {
             newEdges[i].push_back(i);
