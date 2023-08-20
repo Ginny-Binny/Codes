@@ -88,7 +88,6 @@ public:
                     }
                 }
 
-                // If total weight is the same, the edge is pseudo-critical
                 if (forceWeight == stdWeight) {
                     results[1].push_back(newEdges[i][3]);
                 }
