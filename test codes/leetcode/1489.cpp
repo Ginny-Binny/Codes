@@ -53,7 +53,6 @@ public:
             return a[2] < b[2];
         });
 
-        // Find MST weight using union-find
         UnionFind ufStd(n);
         int stdWeight = 0;
         for (const auto& edge : newEdges) {
