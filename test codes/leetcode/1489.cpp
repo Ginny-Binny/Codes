@@ -73,7 +73,6 @@ public:
                 }
             }
 
-            // If the graph is disconnected or the total weight is greater, 
             if (ufIgnore.maxSize < n || ignoreWeight > stdWeight) {
                 results[0].push_back(newEdges[i][3]);
             } else {
