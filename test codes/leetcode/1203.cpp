@@ -20,7 +20,6 @@ public:
     }
 
     vector<int> sortItems(int n, int m, vector<int>& group, vector<vector<int>>& beforeItems) {
-        // isolated item is a group by itself
         for(int i=0; i<n; i++){
             if (group[i]==-1) group[i]=m++;
         }
