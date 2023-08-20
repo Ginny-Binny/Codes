@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<int> topo_sort(auto& adj, vector<int>& deg, int sz){
-        //Kahn's algorithm
         queue<int> q;
         for (int i=0; i<sz; i++)
             if (deg[i]==0) q.push(i);
