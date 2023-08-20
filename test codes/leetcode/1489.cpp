@@ -23,7 +23,6 @@ public:
         }
 
         bool unite(int x, int y) {
-            // Connects x and y
             int rootX = find(x);
             int rootY = find(y);
             if (rootX != rootY) {
