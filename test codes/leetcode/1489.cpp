@@ -63,7 +63,6 @@ public:
         }
 
         vector<vector<int>> results(2);
-        // Check each edge for critical and pseudo-critical
         for (int i = 0; i < m; i++) {
             UnionFind ufIgnore(n);
             int ignoreWeight = 0;
