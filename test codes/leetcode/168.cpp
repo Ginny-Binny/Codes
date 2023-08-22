@@ -9,7 +9,6 @@ public:
             columnNumber = (columnNumber) / 26;
         }
         
-        // Reverse it, as we appended characters in reverse order.
         reverse(ans.begin(), ans.end());
         return ans;
     }
