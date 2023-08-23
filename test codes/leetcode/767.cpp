@@ -18,7 +18,6 @@ public:
         string ans = s;
         int index = 0;
 
-        // Place the most frequent letter
         while (charCounts[letter] != 0) {
             ans[index] = char(letter + 'a');
             index += 2;
