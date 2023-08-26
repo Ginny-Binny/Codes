@@ -6,8 +6,10 @@ int main(){
     int a;
     cin>>a;
 
-    if(a>10)
-    cout<<"greater";
+    if(a>=10)
+    cout<<"A";
+    else if(a>=8)
+    cout<<"B";
     else
-    cout<<"small";
+    cout<<"C";
 }
