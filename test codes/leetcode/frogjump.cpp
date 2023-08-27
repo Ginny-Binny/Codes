@@ -5,7 +5,6 @@ public:
 
     bool canCross(vector<int>& stones) {
         int n = stones.size();
-        // Mark stones in the map to identify if such stone exists or not.
         for (int i = 0 ; i < n; i++) {
             mark[stones[i]] = i;
         }
