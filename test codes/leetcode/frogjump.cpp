@@ -12,7 +12,6 @@ public:
         dp[0][0] = 1;
         for (int index = 0; index < n; index++) {
             for (int prevJump = 0; prevJump <= n; prevJump++) {
-                // If stone exists, mark the value with position and jump as 1.
                 if (dp[index][prevJump]) {
                     if (mark[stones[index] + prevJump]) {
                         dp[mark[stones[index] + prevJump]][prevJump] = 1;
