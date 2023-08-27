@@ -28,7 +28,6 @@ public:
             }
         }
         
-        // If any value with index as n - 1 is true, return true.
         for (int prevJump = 0; prevJump <= n; prevJump++) {
             if (dp[n - 1][prevJump]) {
                 return true;
