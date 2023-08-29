@@ -13,7 +13,6 @@ public:
                 curPenalty++;
             }
 
-            // Update earliestHour if a smaller penatly is encountered.
             if (curPenalty < minPenalty) {
                 earliestHour = i + 1;
                 minPenalty = curPenalty;
