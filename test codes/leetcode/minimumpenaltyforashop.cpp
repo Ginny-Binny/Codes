@@ -7,9 +7,7 @@ public:
 
         for (int i = 0; i < customers.size(); i++) {
             char ch = customers[i];
-            
-            // penatly by 1.
-            if (ch == 'Y') {
+                if (ch == 'Y') {
                 curPenalty--;
             } else {
                 curPenalty++;
