@@ -8,7 +8,6 @@ public:
         for (int i = 0; i < customers.size(); i++) {
             char ch = customers[i];
             
-            // penalty by 1. Otherwise, moving 'N' to open hours increment
             // penatly by 1.
             if (ch == 'Y') {
                 curPenalty--;
