@@ -1,7 +1,6 @@
 class Solution {
 public:
     int bestClosingTime(string customers) {
-        // Start with closing at hour 0, the penalty equals all 'Y' in closed hours.
         int curPenalty = count(customers.begin(), customers.end(), 'Y');
         int minPenalty = curPenalty;
         int earliestHour = 0;
