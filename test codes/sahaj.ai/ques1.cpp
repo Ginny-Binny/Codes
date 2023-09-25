@@ -4,45 +4,37 @@
 using namespace std;
 
 int main() {
-    int L, W, H;
+    int L, W;
     cin >> L >> W;
 
-    vector<vector<int>> flowerPots(L, vector<int>(W));
-    for (int i = 0; i < L; ++i) {
-        for (int j = 0; j < W; ++j) {
-            cin >> flowerPots[i][j];
+    vector<vector<int>> room(L, vector<int>(W));
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < W; j++) {
+            cin >> room[i][j];
         }
     }
 
-    cin >> H;
+    int newHeight;
+    cin >> newHeight;
 
-    int rowToInsert = -1;
-    int colToInsert = -1;
+    int row = -1;
+    int col = -1;
 
-    // Iterate through rows in reverse order
-    for (int i = 0; i < L; ++i) {
-        if (flowerPots[i][0] > H) {
-            rowToInsert = i;
-            colToInsert = 0;
-            break;
-        }
-        if (flowerPots[i][W - 1] < H) {
-            continue;
-        }
-        for (int j = 1; j < W; ++j) {
-            if (flowerPots[i][j - 1] <= H && H <= flowerPots[i][j]) {
-                rowToInsert = i;
-                colToInsert = j;
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < W; j++) {
+            if (room[i][j] > newHeight) {
+                row = i;
+                col = j;
                 break;
             }
         }
-        if (rowToInsert != -1) {
+        if (row != -1) {
             break;
         }
     }
 
-    // Print the coordinates of the suitable position
-    cout << rowToInsert << " " << colToInsert << endl;
+    
+    cout << (row ) << " " << (col) << endl;
 
     return 0;
 }
