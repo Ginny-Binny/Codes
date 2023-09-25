@@ -40,5 +40,5 @@ int main() {
     
     cout << (row) << " " << (col) << endl;
 
-    return 0;
+    return 0;
 }
