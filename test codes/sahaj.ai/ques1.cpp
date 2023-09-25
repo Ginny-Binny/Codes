@@ -3,41 +3,42 @@
 
 using namespace std;
 
-pair<int, int> findPosition(const vector<vector<int>>& flowerPots, int H) {
-    int L = flowerPots.size();
-    int W = flowerPots[0].size();
-
-    for (int i = 0; i < L; ++i) {
-        if (flowerPots[i][0] > H) {
-            return {i, 0};
-        }
-        if (flowerPots[i][W-1] < H) {
-            continue;
-        }
-        for (int j = 0; j < W; ++j) {
-            if (flowerPots[i][j] > H) {
-                return {i, j};
-            }
-        }
-    }
-    return {L-1, W-1};  // If it reaches here, replace the last pot.
-}
-
 int main() {
-    int L, W, H;
+    int L, W;
     cin >> L >> W;
 
-    vector<vector<int>> flowerPots(L, vector<int>(W));
-    for (int i = 0; i < L; ++i) {
-        for (int j = 0; j < W; ++j) {
-            cin >> flowerPots[i][j];
+    vector<vector<int>> r(L, vector<int>(W));
+    for (int i = 0; i < L; i++) {
+        for (int j = 0; j < W; j++) {
+            cin >> r[i][j];
         }
     }
 
-    cin >> H;
+    int height;
+    cin >> height;
 
-    pair<int, int> position = findPosition(flowerPots, H);
-    cout << position.first << " " << position.second << endl;
+    int row = -1;
+    int col = -1;
+
+    for (int i = 0; i < L; i++) {
+        int left = 0, right = W - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (r[i][mid] > height) {
+                col = mid;
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        if (col != -1) {
+            row = i;
+            break;
+        }
+    }
+
+    
+    cout << (row) << " " << (col) << endl;
 
     return 0;
 }
