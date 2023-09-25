@@ -7,38 +7,39 @@ int main() {
     int L, W;
     cin >> L >> W;
 
-    vector<vector<int>> r(L, vector<int>(W));
-    for (int i = 0; i < L; i++) {
-        for (int j = 0; j < W; j++) {
-            cin >> r[i][j];
+    vector<vector<int>> pots(L, vector<int>(W));
+
+    // Read the input matrix
+    for(int i = 0; i < L; i++) {
+        for(int j = 0; j < W; j++) {
+            cin >> pots[i][j];
         }
     }
 
-    int height;
-    cin >> height;
+    int H;
+    cin >> H;
 
-    int row = -1;
-    int col = -1;
+    int row = -1, col = -1;
 
-    for (int i = 0; i < L; i++) {
-        int left = 0, right = W - 1;
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            if (r[i][mid] > height) {
-                col = mid;
-                right = mid - 1;
-            } else {
-                left = mid + 1;
+    // Traverse the matrix to find the position for the new pot
+    for(int i = 0; i < L; i++) {
+        for(int j = 0; j < W; j++) {
+            if(pots[i][j] > H) {
+                row = i;
+                col = j;
+                break;
             }
         }
-        if (col != -1) {
-            row = i;
-            break;
-        }
+        if(row != -1) break;  // If position found, break out of loop
     }
 
-    
-    cout << (row) << " " << (col) << endl;
+    // If no position found in the matrix, it means the new pot will replace the last one
+    if(row == -1) {
+        row = L - 1;
+        col = W - 1;
+    }
 
-    return 0;
+    cout << row << " " << col << endl;
+
+    return 0;
 }
